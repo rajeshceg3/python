@@ -1,7 +1,8 @@
 import requests
 
 city = input('Enter your city : ')
-url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=ade6ca51701b480b4ff90740e6d14611&units=metric'.format(city)
+apikey = 'ade6ca51701b480b4ff90740e6d14611'
+url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units=metric'.format(city,apikey)
 response = requests.get(url)
 data = response.json()
 
