@@ -1,7 +1,9 @@
 import requests
 
 city = input('Enter your city : ')
-apikey = 'ade6ca51701b480b4ff90740e6d14611'
+# It is not a best pracice to put apikey in public
+# Enter you api key below var to proceed with weather request
+apikey = '' 
 url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units=metric'.format(city,apikey)
 response = requests.get(url)
 data = response.json()
